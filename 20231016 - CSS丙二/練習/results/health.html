@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .bread {
+      color: #f00;
+      font-weight: bolder;
+      margin-bottom: 1rem;
+    }
+
+    label {
+      border: 1px solid #aaa;
+      background: #eee;
+      padding: 0.2rem;
+    }
+
+    #mytab {
+      display: flex;
+    }
+
+    .container {
+      border: 1px solid #aaa;
+      background: #eee;
+      padding: 1rem;
+    }
+
+    .content1,
+    .content2,
+    .content3,
+    .content4 {
+      display: none;
+    }
+
+    #tab1:checked~.content1 {
+      display: block;
+    }
+
+    #tab2:checked~.content2 {
+      display: block;
+    }
+
+    #tab3:checked~.content3 {
+      display: block;
+    }
+
+    #tab4:checked~.content4 {
+      display: block;
+    }
+
+    input {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bread">現在位置：首頁＞健康天地</div>
+  <div id="mytab">
+    <label for="tab1">健康新知</label>
+    <label for="tab2">菸害防制</label>
+    <label for="tab3">癌症防治</label>
+    <label for="tab4">慢性病防治</label>
+  </div>
+  <div class="container">
+    <input type="radio" name="health" id="tab1" checked>
+    <input type="radio" name="health" id="tab2">
+    <input type="radio" name="health" id="tab3">
+    <input type="radio" name="health" id="tab4">
+
+    <div class="content1">111</div>
+    <div class="content2">222</div>
+    <div class="content3">333</div>
+    <div class="content4">444</div>
+  </div>
+</body>
+
+</html>
